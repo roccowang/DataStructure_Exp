@@ -27,9 +27,10 @@ public class MainActivity extends Activity {
 		final String tn = in_n.getText().toString();
 		final String tm = in_n.getText().toString();
 		b.setOnClickListener(new OnClickListener() {
+			@SuppressLint("NewApi")
 			@Override
 			public void onClick(View v) {
-				if((in_n.getText().toString()==null)||(in_m.getText().toString()==null)){
+				if((in_n.getText().toString().isEmpty())||(in_m.getText().toString().isEmpty())){
 					
 					Toast t =Toast.makeText(MainActivity.this, "Please enter item", Toast.LENGTH_SHORT);
 				    t.show();
